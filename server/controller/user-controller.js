@@ -8,7 +8,7 @@ dotenv.config();
 
 export const signupUser = async (request, response) => {
   try {
-    const salt = await bcrypt.genSalt();
+    const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(request.body.password, salt);
 
     const user = {
