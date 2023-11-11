@@ -10,8 +10,9 @@ import { DataContext } from "../../context/DataProvider";
 
 const Container = styled(Box)(({ theme }) => ({
   margin: "50px 100px",
+  wordWrap: "break-word",
   [theme.breakpoints.down("md")]: {
-    margin: 0,
+    margin: "0",
   },
 }));
 

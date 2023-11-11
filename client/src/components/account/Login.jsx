@@ -6,11 +6,14 @@ import { API } from "../../service/api";
 import { DataContext } from "../../context/DataProvider";
 import { useNavigate } from "react-router-dom";
 
-const Component = styled(Box)`
-  width: 400px;
-  margin: auto;
-  box-shadow: 5px 2px 5px 2px rgb(0 0 0/ 0.6);
-`;
+const Component = styled(Box)(({ theme }) => ({
+  width: "400px",
+  margin: "auto",
+  boxShadow: "5px 2px 5px 2px rgb(0 0 0/ 0.6)",
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
+}));
 
 const Image = styled("img")({
   width: 100,
